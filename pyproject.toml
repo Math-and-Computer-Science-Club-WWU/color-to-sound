@@ -1,0 +1,17 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+# pycodestyle, pyflakes, import order, naming, modern syntax, bugbear, simplifications, return style,
+# docstrings and a few more
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "C4", "RET", "RUF", "D", "ARG", "PL"]
+ignore = [
+    "D203", "D213",  # conflict with the other docstring rules we use
+    "D107",  # __init__ docstrings are optional when the class docstring explains the class
+    "PLR0913", "PLR0917",  # a few functions legitimately take several settings
+    "PLR2004",  # simple numbers such as 2 and 3 are clear in context
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
