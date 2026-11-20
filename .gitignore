@@ -1,4 +1,3 @@
 __pycache__/
-values.txt
-out.wav
-out.png
+.ruff_cache/
+output/
